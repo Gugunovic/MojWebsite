@@ -70,14 +70,21 @@
         }
         
         .nav-fixed {
-            backdrop-filter: blur(15px);
-            background: rgba(0, 96, 57, 0.95);
+            backdrop-filter: blur(20px);
+            background: rgba(0, 96, 57, 0.1);
+            border-bottom: 1px solid rgba(163, 126, 44, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-fixed.scrolled {
+            background: rgba(0, 96, 57, 0.2);
+            border-bottom: 1px solid rgba(163, 126, 44, 0.4);
         }
         
         .call-button-fixed {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 20px;
+            right: 20px;
             z-index: 1000;
             animation: pulse 2s infinite;
         }
@@ -118,13 +125,13 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden luxury-card">
-            <div class="px-6 py-4 space-y-4">
-                <a href="#home" class="block hover:text-yellow-400 transition-colors">Početna</a>
-                <a href="#services" class="block hover:text-yellow-400 transition-colors">Usluge</a>
-                <a href="#portfolio" class="block hover:text-yellow-400 transition-colors">Portfolio</a>
-                <a href="#pricing" class="block hover:text-yellow-400 transition-colors">Cene</a>
-                <a href="#contact" class="block hover:text-yellow-400 transition-colors">Kontakt</a>
+        <div id="mobileMenu" class="hidden md:hidden luxury-card absolute top-full left-0 right-0">
+            <div class="px-6 py-6 space-y-4">
+                <a href="#home" class="block text-lg font-medium hover:text-yellow-400 transition-colors py-2" onclick="toggleMobileMenu()">Početna</a>
+                <a href="#services" class="block text-lg font-medium hover:text-yellow-400 transition-colors py-2" onclick="toggleMobileMenu()">Usluge</a>
+                <a href="#portfolio" class="block text-lg font-medium hover:text-yellow-400 transition-colors py-2" onclick="toggleMobileMenu()">Portfolio</a>
+                <a href="#pricing" class="block text-lg font-medium hover:text-yellow-400 transition-colors py-2" onclick="toggleMobileMenu()">Cene</a>
+                <a href="#contact" class="block text-lg font-medium hover:text-yellow-400 transition-colors py-2" onclick="toggleMobileMenu()">Kontakt</a>
             </div>
         </div>
     </nav>
@@ -567,9 +574,9 @@
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('nav');
             if (window.scrollY > 50) {
-                nav.classList.add('bg-gray-900/95');
+                nav.classList.add('scrolled');
             } else {
-                nav.classList.remove('bg-gray-900/95');
+                nav.classList.remove('scrolled');
             }
         });
     </script>
