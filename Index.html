@@ -103,17 +103,20 @@
 
         .cookie-banner-wrapper {
             position: fixed;
-            left: 20px;
-            right: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             bottom: 20px;
-            z-index: 900;
+            z-index: 2000;
+            width: 90vw;
+            max-width: 720px;
         }
 
         .cookie-banner-surface {
-            background: rgba(0, 96, 57, 0.45);
-            backdrop-filter: blur(18px);
-            border: 1px solid rgba(163, 126, 44, 0.5);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+            background: rgba(0, 96, 57, 0.72);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(163, 126, 44, 0.65);
+            box-shadow: 0 14px 38px rgba(0, 0, 0, 0.55);
         }
     </style>
 </head>
@@ -446,7 +449,7 @@
                         <div class="space-y-4 mb-8">
                             <div class="flex items-center">
                                 <svg class="w-6 h-6 text-white mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                                 </svg>
                                 <span>info@digitalac.rs</span>
                             </div>
@@ -469,7 +472,7 @@
                                 </a>
                                 <a href="#" class="w-10 h-10 gold-bg rounded-full flex items-center justify-center hover:bg-yellow-600 transition-all duration-300">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
                                     </svg>
                                 </a>
                                 <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="w-10 h-10 gold-bg rounded-full flex items-center justify-center hover:bg-yellow-600 transition-all duration-300" aria-label="WhatsApp">
@@ -498,9 +501,9 @@
     </footer>
 
     <div id="cookieBanner" class="cookie-banner-wrapper hidden">
-        <div class="cookie-banner-surface rounded-2xl px-5 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 max-w-3xl mx-auto">
-            <p class="text-sm text-gray-200">Uporabljamo piškotke za boljšo izkušnjo.</p>
-            <button id="cookieAcceptBtn" type="button" class="gold-bg hover:bg-yellow-600 text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300">Sprejmi</button>
+        <div class="cookie-banner-surface rounded-2xl px-5 py-4 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+            <p class="text-sm text-gray-200 text-center">Uporabljamo piškotke za boljšo izkušnjo.</p>
+            <button id="cookieAcceptBtn" type="button" class="gold-bg hover:bg-yellow-600 text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300 w-full sm:w-auto">Sprejmi</button>
         </div>
     </div>
 
@@ -556,11 +559,37 @@
             const acceptBtn = document.getElementById('cookieAcceptBtn');
 
             if (!banner || !acceptBtn) return;
-            if (localStorage.getItem(consentKey) === 'accepted') return;
+
+            function setCookie(name, value, days) {
+                const expires = days
+                    ? '; expires=' + new Date(Date.now() + days * 864e5).toUTCString()
+                    : '';
+                document.cookie = name + '=' + encodeURIComponent(value) + expires + '; path=/; SameSite=Lax';
+            }
+
+            function getCookie(name) {
+                const prefix = name + '=';
+                const parts = document.cookie.split('; ');
+                for (let i = 0; i < parts.length; i++) {
+                    if (parts[i].indexOf(prefix) === 0) {
+                        return decodeURIComponent(parts[i].slice(prefix.length));
+                    }
+                }
+                return null;
+            }
+
+            try {
+                if (localStorage.getItem(consentKey) === 'accepted') {
+                    setCookie(consentKey, 'accepted', 365);
+                    localStorage.removeItem(consentKey);
+                }
+            } catch (e) {}
+
+            if (getCookie(consentKey) === 'accepted') return;
 
             banner.classList.remove('hidden');
             acceptBtn.addEventListener('click', function () {
-                localStorage.setItem(consentKey, 'accepted');
+                setCookie(consentKey, 'accepted', 365);
                 banner.classList.add('hidden');
             });
         })();
