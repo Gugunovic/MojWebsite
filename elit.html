@@ -7,89 +7,89 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background: #050505; color: white; font-family: sans-serif; -webkit-font-smoothing: antialiased; }
-        /* Zamena za blur - čista boja koja ne koči mobilni */
-        .glass-solid { background: #0f0f0f; border: 1px solid rgba(163, 126, 44, 0.2); }
+        .glass-solid { background: #013220; border: 1px solid rgba(212, 175, 55, 0.3); }
         .gold-text { color: #d4af37; }
-        
-        /* Optimizacija za slajdere */
-        input[type=range] { 
-            accent-color: #d4af37; 
-            height: 6px; 
-            cursor: pointer;
-            touch-action: none; /* Sprečava skrolovanje stranice dok pomeraš slajder */
-        }
+        .gold-bg { background: #d4af37; }
+        input[type=range] { accent-color: #d4af37; cursor: pointer; touch-action: none; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col overflow-x-hidden">
+<body class="min-h-screen">
 
-    <nav class="p-6 max-w-6xl mx-auto w-full flex justify-between items-center">
-        <div class="text-xl font-bold tracking-tight">ELIT <span class="gold-text"></span></div>
-        <a href="index.html" class="text-[10px] uppercase tracking-widest text-gray-500">← Nazaj</a>
+    <nav class="p-6 max-w-6xl mx-auto flex justify-between items-center">
+        <a href="index.html" class="text-xl font-bold uppercase tracking-tighter">ELIT <span class="gold-text">MOTORS</span></a>
+        <a href="index.html" class="text-[10px] uppercase tracking-widest text-gray-500 hover:text-white transition-all">← Nazaj na Digitalac</a>
     </nav>
 
-    <main class="flex-grow flex items-center justify-center px-4 py-8">
-        <div class="max-w-4xl w-full">
-            <div class="glass-solid rounded-2xl p-6 md:p-10 grid md:grid-cols-2 gap-10 items-center">
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+            <div>
+                <h1 class="text-5xl font-bold mb-6 leading-tight uppercase">Vaše vozilo <span class="gold-text">brez kompromisov.</span></h1>
+                <p class="text-gray-400 text-lg mb-8 italic">V Auto Hiši Elit zagotavljamo popolno transparentnost. Vsako vozilo v naši ponudbi je strokovno pregledano in pripravljeno na nove kilometre.</p>
                 
-                <div class="space-y-8">
+                <div class="grid grid-cols-2 gap-6 border-l border-[#d4af37]/30 pl-6">
                     <div>
-                        <div class="flex justify-between mb-3">
-                            <label class="text-xs uppercase text-gray-400">Cena vozila</label>
-                            <span class="font-bold text-sm"><span id="val-cena">45.000</span> €</span>
-                        </div>
-                        <input type="range" id="cena" min="10000" max="150000" step="1000" value="45000" class="w-full appearance-none bg-gray-800 rounded-full" oninput="racunaj()">
+                        <h4 class="gold-text font-bold uppercase text-xs mb-2 tracking-widest">Garancija</h4>
+                        <p class="text-sm text-gray-500">12 mesecev brezskrbne vožnje.</p>
                     </div>
-
                     <div>
-                        <div class="flex justify-between mb-3">
-                            <label class="text-xs uppercase text-gray-400">Polog (%)</label>
-                            <span class="font-bold text-sm"><span id="val-polog">20</span> %</span>
-                        </div>
-                        <input type="range" id="polog" min="10" max="50" step="5" value="20" class="w-full appearance-none bg-gray-800 rounded-full" oninput="racunaj()">
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between mb-3">
-                            <label class="text-xs uppercase text-gray-400">Doba odplate</label>
-                            <span class="font-bold text-sm"><span id="val-meseci">48</span> mes.</span>
-                        </div>
-                        <input type="range" id="meseci" min="12" max="84" step="12" value="48" class="w-full appearance-none bg-gray-800 rounded-full" oninput="racunaj()">
+                        <h4 class="gold-text font-bold uppercase text-xs mb-2 tracking-widest">Financiranje</h4>
+                        <p class="text-sm text-gray-500">Hitra odobritev v 24 urah.</p>
                     </div>
                 </div>
+            </div>
 
-                <div class="bg-black/50 rounded-2xl p-8 text-center border border-white/5">
-                    <p class="text-gray-500 text-[10px] uppercase tracking-widest mb-2">Informativni mesečni obrok</p>
-                    <div class="text-5xl font-bold gold-text" id="rezultat">0,00 €</div>
-                    <div class="h-px bg-gradient-to-r from-transparent via-yellow-900/50 to-transparent my-6"></div>
-                    <a href="index.html#kontakt" class="inline-block w-full py-3 rounded-lg bg-[#d4af37] text-black text-sm font-bold uppercase tracking-tighter">Oddaj povpraševanje</a>
+            <div class="glass-solid rounded-3xl p-8 shadow-2xl">
+                <h2 class="text-2xl font-bold mb-10 text-center uppercase tracking-widest gold-text">Informativni izračun</h2>
+                <div class="space-y-10">
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <label class="text-xs uppercase tracking-tighter text-gray-300">Cena vozila</label>
+                            <span class="font-bold text-lg"><span id="val-cena">45.000</span> €</span>
+                        </div>
+                        <input type="range" id="cena" min="10000" max="150000" step="1000" value="45000" class="w-full h-1.5 bg-gray-800 rounded-lg appearance-none" oninput="racunaj()">
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <label class="text-xs uppercase tracking-tighter text-gray-300">Polog (%)</label>
+                            <span class="font-bold text-lg"><span id="val-polog">20</span> %</span>
+                        </div>
+                        <input type="range" id="polog" min="10" max="50" step="5" value="20" class="w-full h-1.5 bg-gray-800 rounded-lg appearance-none" oninput="racunaj()">
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-3">
+                            <label class="text-xs uppercase tracking-tighter text-gray-300">Doba odplate</label>
+                            <span class="font-bold text-lg"><span id="val-meseci">48</span> m</span>
+                        </div>
+                        <input type="range" id="meseci" min="12" max="84" step="12" value="48" class="w-full h-1.5 bg-gray-800 rounded-lg appearance-none" oninput="racunaj()">
+                    </div>
+                    <div class="bg-black/60 rounded-2xl p-8 text-center border border-white/5">
+                        <p class="text-gray-500 text-[10px] uppercase tracking-[0.2em] mb-2">Mesečni obrok</p>
+                        <div class="text-5xl font-bold gold-text tracking-tighter" id="rezultat">0,00 €</div>
+                        <a href="index.html#contact" class="mt-8 block w-full py-4 gold-bg text-black font-extrabold rounded-xl uppercase text-xs tracking-[0.2em] hover:scale-[1.02] transition-transform">Pridobi ponudbo</a>
+                    </div>
                 </div>
-
             </div>
         </div>
     </main>
 
     <script>
         function racunaj() {
-            // Brzo preuzimanje elemenata
-            const cInput = document.getElementById('cena');
-            const pInput = document.getElementById('polog');
-            const mInput = document.getElementById('meseci');
-            
-            const cena = parseInt(cInput.value);
-            const polog = parseInt(pInput.value);
-            const n = parseInt(mInput.value);
-            const i = 0.065; // 6.5%
+            const cena = parseInt(document.getElementById('cena').value);
+            const polog = parseInt(document.getElementById('polog').value);
+            const n = parseInt(document.getElementById('meseci').value);
+            const i = 0.065; 
 
-            // Brzo ažuriranje teksta
             document.getElementById('val-cena').textContent = cena.toLocaleString('sl-SI');
             document.getElementById('val-polog').textContent = polog;
             document.getElementById('val-meseci').textContent = n;
 
-            // Kalkulacija
             const glavnica = cena - (cena * (polog / 100));
             const rata = (glavnica * (1 + (i * (n / 12)))) / n;
             
-            document.getElementById('rezultat').textContent = rata.toLocaleString('sl-SI', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €";
+            document.getElementById('rezultat').textContent = rata.toLocaleString('sl-SI', { 
+                minimumFractionDigits: 2, 
+                maximumFractionDigits: 2 
+            }) + " €";
         }
         window.onload = racunaj;
     </script>
