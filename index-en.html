@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digitalac | Web rešitve Maribor </title>
-    <meta name="description" content="Izrada vrhunskih web stranica i digitalni marketing u Mariboru. Kontaktirajte Digitalac za vašu online prisutnost.">
-    <meta property="og:title" content="Digitalac - Vaš partner za digitalni rast">
-    <meta property="og:description" content="Profesionalni web sajtovi za firme u Sloveniji.">
+    <title>Digitalac | Digital Solutions Maribor</title>
+    <meta name="description" content="Premium web development and digital marketing in Maribor. Contact Digitalac for your online presence.">
+    <meta property="og:title" content="Digitalac - Your Partner for Digital Growth">
+    <meta property="og:description" content="Professional websites for businesses in Slovenia.">
     <meta property="og:url" content="https://digitalac.info">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -305,39 +305,41 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-20">
-        <div class="container mx-auto px-6">
+        <section class="py-20 px-4 max-w-6xl mx-auto">
             <h2 class="text-5xl md:text-6xl font-bold text-center mb-20 gold-text">Portfolio</h2>
-            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                <!-- Auto Kuca Elit -->
-                <div class="luxury-card gold-border rounded-2xl p-10 hover:transform hover:scale-105 transition-all duration-300">
-                    <div class="flex items-start justify-between gap-4 mb-8">
-                        <h3 class="text-2xl font-bold">Auto Kuća Elit</h3>
-                    </div>
-                    <div class="h-44 rounded-xl bg-gradient-to-br from-white/10 to-transparent border border-white/10 mb-6"></div>
-                    <p class="text-gray-300 mb-4">Premium vehicle sales and advanced installment calculations for automobiles.</p>
-                    <ul class="text-sm text-gray-400 space-y-2">
-                        <li>• Luxury online advertising</li>
-                        <li>• Integrated installment calculator</li>
-                        <li>• Modern user experience</li>
-                    </ul>
-                </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <a href="elit.html" class="block group h-full">
+                    <div class="luxury-card gold-border rounded-2xl p-10 hover:transform hover:scale-105 transition-all duration-300 h-full flex flex-col">
+                        <h3 class="text-2xl font-bold mb-6 text-white uppercase tracking-tight">Avto Hiša Elit</h3>
+                        
+                        <div class="mb-6 overflow-hidden rounded-lg bg-black/20">
+                            <img src="https://images.unsplash.com/photo-1568496700509-083ddf62299c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                 alt="Luxury Car" 
+                                 class="w-full aspect-video object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
 
-                <!-- Dental Center Maribor -->
-                <div class="luxury-card gold-border rounded-2xl p-10 hover:transform hover:scale-105 transition-all duration-300">
-                    <div class="flex items-start justify-between gap-4 mb-8">
-                        <h3 class="text-2xl font-bold">Dental Center Maribor</h3>
-                        <span class="gold-bg text-white px-4 py-1.5 rounded-full text-xs font-bold">Coming soon</span>
+                        <p class="text-gray-400 mb-6 italic text-sm">Advanced leasing calculator and digital car showroom.</p>
+                        <div class="mt-auto text-white font-bold uppercase text-xs tracking-widest">View Project →</div>
                     </div>
-                    <div class="h-44 rounded-xl bg-gradient-to-br from-white/10 to-transparent border border-white/10 mb-6"></div>
-                    <p class="text-gray-300 mb-4">Modern dental solutions with an advanced booking system.</p>
-                    <ul class="text-sm text-gray-400 space-y-2">
-                        <li>• Web-based booking system</li>
-                        <li>• Modern dental technology</li>
-                        <li>• Patient-friendly interface</li>
-                    </ul>
-                </div>
+                </a>
+
+                <a href="dental.html" class="block group h-full">
+                    <div class="luxury-card gold-border rounded-2xl p-10 hover:transform hover:scale-105 transition-all duration-300 h-full flex flex-col">
+                        <h3 class="text-2xl font-bold mb-6 text-white uppercase tracking-tight">Dental Center Maribor</h3>
+                        
+                        <div class="mb-6 overflow-hidden rounded-lg bg-black/20">
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                 alt="Dental Clinic" 
+                                 class="w-full aspect-video object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+
+                        <p class="text-gray-400 mb-6 italic text-sm">Interactive service cost calculator and reservation system.</p>
+                        <div class="mt-auto text-white font-bold uppercase text-xs tracking-widest">View Project →</div>
+                    </div>
+                </a>
             </div>
-        </div>
+        </section>
     </section>
 
     <!-- Pricing Section -->
@@ -348,9 +350,9 @@
                 <!-- Starter Package -->
                 <div class="luxury-card gold-border rounded-2xl p-10 hover:transform hover:scale-105 transition-all duration-300">
                     <h3 class="text-2xl font-bold mb-4">Starter</h3>
-                    <div class="text-4xl font-bold mb-6">
-                        €250
-                        <span class="text-lg text-gray-400">/one-time</span>
+                    <div class="mb-6">
+                        <span class="text-sm text-gray-500 uppercase tracking-widest">Starting from</span>
+                        <div class="text-5xl font-bold text-[#d4af37]">249 €</div>
                     </div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center">
@@ -389,9 +391,9 @@
                         MOST POPULAR
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Business</h3>
-                    <div class="text-4xl font-bold mb-6">
-                        €500
-                        <span class="text-lg text-gray-400">/one-time</span>
+                    <div class="mb-6">
+                        <span class="text-sm text-gray-500 uppercase tracking-widest">Starting from</span>
+                        <div class="text-5xl font-bold text-[#d4af37]">499 €</div>
                     </div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center">
@@ -473,58 +475,53 @@
                     <!-- Contact Form -->
                     <div class="luxury-card gold-border rounded-2xl p-10">
                         <h3 class="text-2xl font-bold mb-6">Send us a message</h3>
-                        <form onsubmit="handleSubmit(event)">
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="c5a4377c-ee7d-4865-a8c0-70a60aa90bd8">
+                            <input type="hidden" name="redirect" value="https://digitalac.info/hvala.html">
                             <div class="mb-6">
                                 <label class="block text-sm font-medium mb-2">Full name</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-cyan-400 focus:outline-none transition-colors" placeholder="Your name">
+                                <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-cyan-400 focus:outline-none transition-colors" placeholder="Your name">
                             </div>
                             <div class="mb-6">
                                 <label class="block text-sm font-medium mb-2">Email</label>
-                                <input type="email" required class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-cyan-400 focus:outline-none transition-colors" placeholder="your@email.com">
+                                <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-cyan-400 focus:outline-none transition-colors" placeholder="your@email.com">
                             </div>
                             <div class="mb-6">
                                 <label class="block text-sm font-medium mb-2">Message</label>
-                                <textarea required rows="4" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-cyan-400 focus:outline-none transition-colors" placeholder="Tell us more about your project..."></textarea>
+                                <textarea name="message" required rows="4" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-cyan-400 focus:outline-none transition-colors" placeholder="Tell us more about your project..."></textarea>
                             </div>
                             <button type="submit" class="w-full gold-bg hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                                 Send message
                             </button>
                         </form>
                     </div>
-
                     <!-- Contact Info -->
                     <div class="luxury-card gold-border rounded-2xl p-10">
-                        <h3 class="text-2xl font-bold mb-6">Details</h3>
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
                         <div class="space-y-4 mb-8">
                             <div class="flex items-center">
                                 <svg class="w-6 h-6 text-white mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                 </svg>
-                                <span>info@digitalac.rs</span>
+                                <span>kontakt@digitalac.info</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-6 h-6 text-white mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                 </svg>
-                                <span>Slovenia, Maribor</span>
+                                <span>Slovenija, Maribor</span>
                             </div>
                         </div>
-
                         <div>
                             <h4 class="text-lg font-semibold mb-4">Follow us</h4>
                             <div class="flex space-x-4">
-                                <a href="#" class="w-10 h-10 gold-bg rounded-full flex items-center justify-center hover:bg-yellow-600 transition-all duration-300">
+                                <a href="https://www.instagram.com/digitalac_agency/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 gold-bg rounded-full flex items-center justify-center hover:bg-yellow-600 transition-all duration-300" aria-label="Instagram">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.645.069-4.849.069-3.205 0-3.584-.012-4.849-.069-3.225-.149-4.771-1.664-4.919-4.919-.058-1.265-.069-1.645-.069-4.849 0-3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
                                     </svg>
                                 </a>
-                                <a href="#" class="w-10 h-10 gold-bg rounded-full flex items-center justify-center hover:bg-yellow-600 transition-all duration-300">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 4.949c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
-                                    </svg>
-                                </a>
-                                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="w-10 h-10 gold-bg rounded-full flex items-center justify-center hover:bg-yellow-600 transition-all duration-300" aria-label="WhatsApp">
+                                <a href="https://wa.me/38668134284" target="_blank" rel="noopener noreferrer" class="w-10 h-10 gold-bg rounded-full flex items-center justify-center hover:bg-yellow-600 transition-all duration-300" aria-label="WhatsApp">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 32 32">
                                         <path d="M16.04 2.003c-7.71 0-13.98 6.27-13.98 13.98 0 2.46.64 4.86 1.86 6.98L2 30l7.19-1.89a13.9 13.9 0 006.85 1.75h.01c7.71 0 13.98-6.27 13.98-13.98S23.75 2.003 16.04 2.003zm8.14 19.74c-.34.96-1.68 1.76-2.69 1.98-.69.15-1.58.27-4.58-.98-3.83-1.6-6.3-5.55-6.49-5.8-.18-.25-1.56-2.08-1.56-3.97 0-1.89.99-2.82 1.34-3.21.35-.39.76-.48 1.01-.48.25 0 .5 0 .72.01.23.01.54-.09.85.65.31.74 1.06 2.56 1.15 2.75.09.19.15.42.03.67-.12.25-.18.42-.36.64-.18.22-.38.49-.54.66-.18.18-.37.37-.16.72.21.35.94 1.55 2.01 2.51 1.38 1.23 2.54 1.61 2.89 1.79.35.18.56.15.77-.09.21-.25.88-1.02 1.12-1.37.24-.35.48-.29.8-.18.32.12 2.02.95 2.37 1.12.35.18.58.27.66.42.09.15.09.88-.25 1.84z"/>
                                     </svg>
