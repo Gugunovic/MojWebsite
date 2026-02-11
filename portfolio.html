@@ -230,6 +230,8 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
     <script>
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -237,6 +239,11 @@
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Lucide icons
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
     </script>
 </body>
 </html>
